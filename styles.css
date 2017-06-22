@@ -1,0 +1,23 @@
+
+		   body {background-color:blue;}
+		   p {color: white;
+		      font-family: courier;
+			  font-size: 160%;
+			  border: 1px solid red;
+			  padding : 33px;
+			  margin: 33px;
+			 }
+			 
+		#pp {
+			
+			  border: 3px solid red;
+			  padding : 10px;
+			  margin: 15px;
+		    }
+		
+       p.clas {
+		       border: 3px solid red;
+			   padding : 5px;
+			   margin: 43px;
+	          }
+	
