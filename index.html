@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ne Practice</title>
+	<script type="text/javascript">
+		function anil(){
+			document.getElementById("myname").innerHTML= "My name is "+ document.getElementById("name").value;
+		}
+		
+	</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+</head>
+<body ng-app="">
+
+<form>
+	<input type="text" id="name" name="" onblur="anil();">
+	<span id="myname">My name is ......</span>
+	<input type="text" id="name1" name="" ng-model="myname">
+	<span id="myname1">My name is ......{{myname}}</span>
+
+</form>
+</body>
+
+</html>
