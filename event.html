@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>changeback groung color</title>
+	
+	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body style="background:{{type}};" ng-init="list = ['one', 'two', 'three','four', {name:'mohan',  age:20},{name:'monu',  age:24}]">
+
+<ul> 
+<li ng-repeat="item in list">
+    {{item}}
+    
+    name is {{item.name}}  age is {{item.age}}
+    </li>
+</ul>
+
+
+	
+<form>
+			 <input type="text" ng-model="type">	
+			 <h1>{{type}}</h1>
+
+
+	 
+
+</form>
+</body>
+
+</html>

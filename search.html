@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+	<title>changeback groung color</title>
+	
+	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript">
+
+	</script>
+</head>
+<body style="background:{{type}};" ng-init="list = [ {name:'mohan',  age:20},{name:'monu',  age:24},{name:'raju',  age:30},{name:'rohan',  age:35},{name:'alon',  age:26},{name:'sk',  age:74}]">
+
+<ul> 
+<li ng-repeat="item in list | filter:search">
+    
+    
+  {{item.name}}-{{item.age}}
+    </li>
+</ul>
+
+
+	
+<form>
+			<input type="text" ng-model="search" placeholder="search">
+
+
+			 <input type="text" ng-model="type" placeholder="type color of text">	
+			 <h1>{{type}}</h1>
+
+
+	 
+
+</form>
+</body>
+
+</html>

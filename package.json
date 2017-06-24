@@ -1,0 +1,25 @@
+{
+  "name": "javascripyprc",
+  "version": "1.0.0",
+  "description": "js ng",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhmohan333/javascript.git"
+  },
+  "keywords": [
+    "js"
+  ],
+  "author": "mohan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/singhmohan333/javascript/issues"
+  },
+  "homepage": "https://github.com/singhmohan333/javascript#readme",
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
+}
