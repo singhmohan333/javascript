@@ -32,7 +32,7 @@
 <br>
   <table border="4" cellspacing="3" cellpadding="6">
   <caption>Employee Detail</caption>
-  <tr><th>Employee Name</th><th>Employee ID</th><th>Employee Gender</th><th>Company Name</th><th>Department Name</th><th>Contact Number</th> <th>Address</th><th><button>Delete</button>
+  <tr><th>Employee Name</th><th>Employee ID</th><th>Employee Gender</th><th>Company Name</th><th>Department Name</th><th>Contact Number</th> <th>Address</th><th><button>Delete</button></th><th><button>EDIT</button></th>
   <tr ng-repeat="item in employee">
 
     <td>{{item.empname}} - </td>
@@ -43,7 +43,7 @@
     <td> {{item.contact}} </td>
     <td> {{item.address}} </td>
     <td><button ng-click="deleterec($index)">X</button></td>
-  
+    <td><button ng-click="editrec($index)">E</button></td>
   </tr>
 
     
