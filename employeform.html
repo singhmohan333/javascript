@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="Mohan">
+<head>
+	<title>form</title>
+	<script type="text/javascript">
+  
+	</script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+
+	<script type="text/javascript" src="app.js">
+		
+	</script>
+</head>
+<body  ng-controller="myctrl" >
+<center>
+<form>
+       <table border="6" cellpadding="4" cellspacing="5">
+       <caption>Enter Data</caption>
+       <tr><td>Employee Name</td> <td><input type="text" name="empname" ng-model="emp.empname"></td></tr>
+      <tr><td>Employee ID</td><td><input type="text" name="" ng-model="emp.empid"></td></tr> <br>
+ 	  <tr><td>Gender </td><td><input type="radio" name="gender" ng-model="emp.gender" value="Male">Male  <input type="radio" name="gender" ng-model="emp.gender" value="Female"> Female </td></tr> <br>
+ 	<tr><td>Company Name</td><td><input type="text" name="compname" ng-model="emp.compname"></td></tr>
+ 	<tr><td>Department Name</td><td><input type="text" ng-model="emp.deptname"></td></tr>
+ 	<tr><td>Contact</td><td><input type="text" name="contact" ng-model="emp.contact"></td></tr>
+ 	<tr><td>Address Name</td><td><input type="text" ng-model="emp.address"></td></tr>
+   </table>
+   <button ng-click="submit();" >Submit</button>
+   </form>
+   </center>
+<br>
+<br>
+  <table border="4" cellspacing="3" cellpadding="6">
+  <caption>Employee Detail</caption>
+  <tr><th>Employee Name</th><th>Employee ID</th><th>Employee Gender</th><th>Company Name</th><th>Department Name</th><th>Contact Number</th> <th>Address</th><th><button>Delete</button>
+  <tr ng-repeat="item in employee">
+
+    <td>{{item.empname}} - </td>
+    <td> {{item.empid}} </td>
+    <td> {{item.gender}} </td>
+    <td> {{item.compname}} </td>
+    <td> {{item.deptname}} </td>
+    <td> {{item.contact}} </td>
+    <td> {{item.address}} </td>
+    <td><button ng-click="deleterec($index)">X</button></td>
+  
+  </tr>
+
+    
+   <!-- <th >Employee Name</th><th>Employee ID</th><th>Gender</th><th>Company Name</th><th>Department Name</th><tr>
+   <tr><td>ANIL KUMAR</td><td>001</td><td>MALE</td><td>HTC </td><td>I.T.</td><tr>
+   <tr><td>MOHAN</td><td>1044</td><td>MALE</td><td>TATA LTD.</td><td>LAB</td><tr>
+   <tr><td>AKESH</td><td>234</th><td>MALE</td><td>RELINCE LTD.</td><td>SALES</td><tr> -->
+   
+  </table>
+</body>
+
+</html>
