@@ -34,7 +34,7 @@
 			 	$scope.employee.splice(index,1);
 			 }
 			 $scope.editrec = function(index){
-			 $scope.emp = $scope.employee[index]
+			 $scope.emp = angular.copy($scope.employee[index])
 			 }
 
 		})
