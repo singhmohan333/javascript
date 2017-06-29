@@ -6,6 +6,7 @@
   
 	</script>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
 	<script type="text/javascript" src="app.js">
@@ -13,7 +14,13 @@
 	</script>
 </head>
 <body  ng-controller="myctrl" >
-<center>
+<div class="row">
+
+<div class="col-sm-4" style="background-color:grey">
+click
+</div>
+<div class="col-sm-3" style="background-color:red">
+
 <form>
        <table border="6" cellpadding="4" cellspacing="5">
        <caption>Enter Data</caption>
@@ -25,13 +32,17 @@
  	<tr><td>Contact</td><td><input type="text" name="contact" ng-model="emp.contact"></td></tr>
  	<tr><td>Address Name</td><td><input type="text" ng-model="emp.address"></td></tr>
    </table>
-   <button ng-click="submit();" >Submit</button>
+   <button class="btn btn-success" ng-click="submit();" >Submit</button>
    </form>
-   </center>
+   </div>
+   <div class="col-sm-5" style="background-color:silver">
+   col sm 5
+   </div>
+   </div>
 <br>
 <br>
-  <table border="4" cellspacing="3" cellpadding="6">
-  <caption>Employee Detail</caption>
+  <table class="table table-responsible" border="4" cellspacing="3" cellpadding="6">
+  <caption class="caption-">Employee Detail</caption>
   <tr><th>Employee Name</th><th>Employee ID</th><th>Employee Gender</th><th>Company Name</th><th>Department Name</th><th>Contact Number</th> <th>Address</th><th><button>Delete</button></th><th><button>EDIT</button></th>
   <tr ng-repeat="item in employee">
 
@@ -42,7 +53,7 @@
     <td> {{item.deptname}} </td>
     <td> {{item.contact}} </td>
     <td> {{item.address}} </td>
-    <td><button ng-click="deleterec($index)">X</button></td>
+    <td><button class="btn btn-success" ng-click="deleterec($index)">X</button></td>
     <td><button ng-click="editrec($index)">E</button></td>
   </tr>
 
