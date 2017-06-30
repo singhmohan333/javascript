@@ -19,14 +19,14 @@
 <div class="col-sm-4" style="background-color:grey">
 click
 </div>
-<div class="col-sm-3" style="background-color:red">
+<div class="col-sm-3">
 
 <form>
-       <table border="6" cellpadding="4" cellspacing="5">
+       <table class=" table table-striped table-responsible table-bordered table-hover table-condensed" >
        <caption>Enter Data</caption>
        <tr><td>Employee Name</td> <td><input type="text" name="empname" ng-model="emp.empname"></td></tr>
       <tr><td>Employee ID</td><td><input type="text" name="" ng-model="emp.empid"></td></tr> <br>
- 	  <tr><td>Gender </td><td><input type="radio" name="gender" ng-model="emp.gender" value="Male">Male  <input type="radio" name="gender" ng-model="emp.gender" value="Female"> Female </td></tr> <br>
+ 	  <tr><td>Gender </td><td><div> <input type="radio" name="gender" ng-model="emp.gender" value="Male">Male  <input type="radio" name="gender" ng-model="emp.gender" value="Female"> Female </td></tr> <br>
  	<tr><td>Company Name</td><td><input type="text" name="compname" ng-model="emp.compname"></td></tr>
  	<tr><td>Department Name</td><td><input type="text" ng-model="emp.deptname"></td></tr>
  	<tr><td>Contact</td><td><input type="text" name="contact" ng-model="emp.contact"></td></tr>
@@ -41,10 +41,10 @@ click
    </div>
 <br>
 <br>
-  <table class="table table-responsible" border="4" cellspacing="3" cellpadding="6">
-  <caption class="caption-">Employee Detail</caption>
-  <tr><th>Employee Name</th><th>Employee ID</th><th>Employee Gender</th><th>Company Name</th><th>Department Name</th><th>Contact Number</th> <th>Address</th><th><button>Delete</button></th><th><button>EDIT</button></th>
-  <tr ng-repeat="item in employee">
+  <table class="table table-responsible table-hover" border="4" cellspacing="3" cellpadding="6">
+  <caption>Employee Detail</caption>
+  <tr class="info"><th>Employee Name</th><th>Employee ID</th><th>Employee Gender</th><th>Company Name</th><th>Department Name</th><th>Contact Number</th> <th>Address</th><th><button>Delete</button></th><th><button>EDIT</button></th>
+  <tr class="danger" ng-repeat="item in employee">
 
     <td>{{item.empname}} - </td>
     <td> {{item.empid}} </td>
