@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myapplication">
 <head>
 	<title>changeback groung color</title>
 	
 	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
-	<script type="text/javascript">
-
+	<script src="myapplication.js">
 	</script>
 </head>
-<body style="background:{{type}};" ng-init="list = [ {name:'mohan',  age:20},{name:'monu',  age:24},{name:'raju',  age:30},{name:'rohan',  age:35},{name:'alon',  age:26},{name:'sk',  age:74}]">
+<body ng-controller="myapplicationController">
 
 <ul> 
 <li ng-repeat="item in list | filter:search">
@@ -22,14 +21,14 @@
 	
 <form>
 			<input type="text" ng-model="search" placeholder="search">
+</form>
 
-
-			 <input type="text" ng-model="type" placeholder="type color of text">	
-			 <h1>{{type}}</h1>
-
-
-	 
-
+<form ng-submit="addPerson()">
+  
+  <input type="text" name="text1" ng-model="text1">
+  <input type="text" name="text2" ng-model="text2">
+  <input type="button" name="btn" value="Submit">
+	
 </form>
 </body>
 

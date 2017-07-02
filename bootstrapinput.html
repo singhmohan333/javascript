@@ -1,0 +1,229 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+
+</script>
+</head>
+<body >
+
+<div class="form-group">
+  <label for="sel1">Select list:</label>
+  <select class="form-control" id="sel1">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+  </select>
+</div>
+
+<form>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon">Text</span>
+    <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+  </div>
+</form>
+
+<form>
+  <div class="form-group">
+    <label for="inputsm">Small input</label>
+    <input class="form-control input-sm" id="inputsm" type="text">
+  </div>
+   <div class="form-group">
+    <label for="inputdefault">Default input</label>
+    <input class="form-control" id="inputdefault" type="text">
+  </div>
+  <div class="form-group">
+    <label for="inputlg">Large input</label>
+    <input class="form-control input-lg" id="inputlg" type="text">
+  </div>
+</form>
+
+ <div class="col-xs-2">
+    <label for="ex1">col-xs-2</label>
+    <input class="form-control" id="ex1" type="text">
+  </div>
+
+
+  <div class="form-group">.   <!-- for password   help block -->
+  <label for="pwd">Password:</label>
+  <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+  <span class="help-block">help </span>
+</div>
+
+<form>                          <!-- for input small.  default.   large -->
+  <div class="form-group">
+    <label for="inputsm">Small input</label>
+    <input class="form-control input-sm" id="inputsm" type="text">
+  </div>
+   <div class="form-group">
+    <label for="inputdefault">Default input</label>
+    <input class="form-control" id="inputdefault" type="text">
+  </div>
+  <div class="form-group">
+    <label for="inputlg">Large input</label>
+    <input class="form-control input-lg" id="inputlg" type="text">
+  </div>
+</form>
+
+
+
+ <div class="col-xs-4">							<!-- for .col-xs-4 text -->
+    <label for="ex2">col-xs-3</label>
+    <input class="form-control" id="ex2" type="text">
+  </div>
+
+
+
+
+
+
+ 
+  <div class="media">              <!--.media  objects-->
+		  <div class="media-left">
+		    <img src="ik.png" class="media-object" style="width:60px">
+			  </div>
+			  <div class="media-body">
+			    <h4 class="media-heading">India</h4>
+			    <p>India is my counter ! I like our Country jai hind</p>
+		  </div>
+ </div>
+
+
+
+ 		  <div class="media-left media-top">
+		    <img src="ik.png"  style="width:60px">
+			  </div>
+			  <div class="media-body">
+			    <h4 class="media-heading">India</h4>
+			    <p>India is my counter ! I like our Country jai hind
+			    ndia is a vast South Asian country with diverse terrain – from Himalayan peaks to Indian Ocean coastline – and history reaching back 5 millennia. In the north, Mughal Empire landmarks include Delhi’s Red Fort complex and massive Jama Masjid mosque, plus Agra’s iconic Taj Mahal mausoleum. Pilgrims bathe in the Ganges in Varanasi, and Rishikesh is a yoga centre and base for Himalayan trekking.</p>
+		  </div>
+ </div>
+
+
+
+
+  <div class="media">
+    <div class="media-left">
+      <img src="ik.png" class="media-object" style="width:45px">
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">king.</p>
+      
+      							<!-- Nested media object -->
+      <div class="media">
+        <div class="media-left">
+          <img src="ik.png" class="media-object" style="width:45px">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">singh </h4>
+
+          <!-- Nested media object -->
+          <div class="media">
+            <div class="media-left">
+              <img src="il.png" class="media-object" style="width:45px">
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">My name. </h4>
+            </div>
+          </div>
+          
+        </div>
+
+
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0"></li>
+    <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+ 
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="ik.png" >
+    </div>
+
+    <div class="item" >
+      <img src="il.png" >
+    </div>
+
+    <div class="item">
+      <img src="ik.png" >
+    </div>
+  </div>
+
+<!--   model   msz -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"> MODEL CLICK ME</button>
+
+
+  <div class="modal fade" id="myModal" role="dialog">
+   <div class="modal-dialog">
+    
+    <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">YAHOOOO!!!!!!</h4>
+        </div>
+        <div class="modal-body">
+          <p>welcome to model</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">BYYYYYYY!!!!!</button>
+        </div>
+      </div>
+
+
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+
+<ul class="list-inline">
+    <li><a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a></li>
+    <li><a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <h3>Popover Example</h3>
+  <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+</div>
+
+
+
+
+
+
+
+ 
+
+
+</body>
+</html>
