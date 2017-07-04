@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<title>Ne Practice</title>
+	<script type="text/javascript">
+		function anil(){
+			document.getElementById("myname").innerHTML= "My name is "+ document.getElementById("name").value;
+		}
+		function image(){
+			alert("hello");
+		}
+		function image2(){
+			document.write("hello");
+		}
+
+		var a=50;  
+			if(a%2==0){  
+			document.write("a is even number"+ a);  
+			}  
+			else{  
+			document.write("a is odd number" + a);  
+			}
+		
+	</script>
+	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript">
+		var myApp = angular.module("mohan", []);
+		myApp.controller("myctrl",function($scope){
+				$scope.myname = "Anil Kumars"
+		})
+	</script>
+</head>
+<body>
+<div ng-app="mohan" ng-controller="myctrl">
+	
+<form>
+	Enter name<input  type="text" id="name" name="" onblur="anil();">
+	   <span id="myname">My name is ......</span>
+	<input type="text" id="name1" name="" ng-model="myname">
+	   <span id="myname1">My name is {{myname}}</span>
+
+	 <input type="text" name="t1" onfocus="image2()">
+
+				 <input type="text" ng-model="t2">
+				 <h1>{{t2}}</h1>
+
+	 
+
+</form>
+</div>
+   <img src="javascript_logo.png" onabort="image()">  </img>
+
+   <img src="javascript_logo.png" ondblclick="image()">
+
+
+
+ 
+
+</body>
+
+</html>

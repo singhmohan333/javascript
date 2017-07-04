@@ -1,61 +1,106 @@
 <!DOCTYPE html>
-<html >
+<html ng-app="detailEmp">
 <head>
-	<title>Ne Practice</title>
-	<script type="text/javascript">
-		function anil(){
-			document.getElementById("myname").innerHTML= "My name is "+ document.getElementById("name").value;
-		}
-		function image(){
-			alert("hello");
-		}
-		function image2(){
-			document.write("hello");
-		}
-
-		var a=50;  
-			if(a%2==0){  
-			document.write("a is even number"+ a);  
-			}  
-			else{  
-			document.write("a is odd number" + a);  
-			}
-		
-	</script>
-	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
-	<script type="text/javascript">
-		var myApp = angular.module("mohan", []);
-		myApp.controller("myctrl",function($scope){
-				$scope.myname = "Anil Kumars"
-		})
-	</script>
-</head>
-<body>
-<div ng-app="mohan" ng-controller="myctrl">
+	<title>DATA</title>
 	
-<form>
-	Enter name<input  type="text" id="name" name="" onblur="anil();">
-	   <span id="myname">My name is ......</span>
-	<input type="text" id="name1" name="" ng-model="myname">
-	   <span id="myname1">My name is {{myname}}</span>
+	<script type="text/javascript" src="node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.3/angular-animate.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+      <script type="text/javascript" src="aganimate.js"></script>
+<!--   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular-animate.js"></script>
+ -->
+	<script type="text/javascript" src="detailEmp.js">
+	</script>
 
-	 <input type="text" name="t1" onfocus="image2()">
+	<style>
+	   ul{
+	   	list-style:none;
+	   }
+	   li{
+	   	display: flex;
+	   }
+	   li span{
 
-				 <input type="text" ng-model="t2">
-				 <h1>{{t2}}</h1>
+	   	display: inline-block;
+	   }
 
-	 
+  li img{
+  	  border-radius: 55%;
+  	  height: 100px;
+  	  width:110px; 
 
-</form>
-</div>
-   <img src="javascript_logo.png" onabort="image()">  </img>
+  }
+		.over{   
+			background: red;
+		}
+		.unders{   
+			background: green;
+		}
+       .hidden{
+       	    display:none;
+       }
+       li.ng-enter{
+        animation: :fadeIn 3s linear ;
+       }
+        @keyframes fadeIn {
+          from{
+           
+            opacity: 0;
 
-   <img src="javascript_logo.png" ondblclick="image()">
+          }
+          to {
+            opacity: 1;
+          }
+        }
 
 
+       ul.ng-enter{
+       	transition:3s ease all;
+       	opacity:0;
+       	transform: translateX(-100%); 
+       }
+       ul.ng-enter.ng-enter-active{
+   
+       	opacity: 1;
+       	transform: translateX(0);
+       }
+       ul.ng-leave{
+       	transition:3s ease all; 
+       	opacity:1; 
+       	transform: translateX(0);
+       }
+       ul.ng-leave.ng-leave-active{
+       	transform: translateX(-100%);
+       	opacity: 0;
+       }
+	</style>
+</head>
+<!-- <body ng-controller="myCntrl"> -->
 
- 
+<body>
 
+<helo-web> </helo-web>
+
+ <!-- <input type="text" ng-model="search" placeholder="search">
+
+<ul ng-if="toggle"> 
+<li ng-class="{'hidden': !toggle}" ng-repeat="item in list | filter:search"  ng-class="item.age>30?'over':'unders'"> 
+
+ <ng-include src="'photo.html'">  </ng-include>
+    
+     <img ng-src="{{item.img}}" /> {{item.name}} - {{item.age}} 
+  </li>
+</ul>
+ <button  ng-hide="toggle" ng-click="toggle = true">Show Name</button>  ng-hide="!listt.toogle" 
+ <button ng-hide="!toggle" ng-click="toggle = false ">Hide Name</button>
+
+<form ng-submit="addPerson()">
+  
+  <input type="text"  ng-model="name" placeholder="enter name">
+  <input type="number"  ng-model="age">
+  <input type="submit" value="Submit">
+
+</form> -->
 </body>
 
 </html>

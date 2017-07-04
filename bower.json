@@ -1,0 +1,21 @@
+{
+  "name": "javascripyprc",
+  "description": "js ng",
+  "main": "index.html",
+  "authors": [
+    "mohan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "js"
+  ],
+  "homepage": "https://github.com/singhmohan333/javascript",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
