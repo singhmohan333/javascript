@@ -1,10 +1,13 @@
 angular.module('detailEmp', ['ngAnimate','ui.router'])
 
     .config(function($stateProvider, $urlRouterProvider){
-     $stateProvider.state('home',
+// $urlRouterProvider.otherwise('/home');
+     $stateProvider
+     .state('home',
       {
-      url: '/home',
-      template: 'helloooooo'
+      url: '/',
+      templateUrl: 'home.html' ,
+      controller: "myCntrl"  
     
      });
 
@@ -12,9 +15,6 @@ angular.module('detailEmp', ['ngAnimate','ui.router'])
 
 	.controller('myCntrl', function($scope)
 	{
-
-		 
-
 		 $scope.toggle = true ;
 
 			$scope.list = [ {name:'mohan',  age:20 , img:'il.png'},

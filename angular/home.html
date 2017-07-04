@@ -1,0 +1,22 @@
+<!-- <helo-web> </helo-web> -->
+
+ <input type="text" ng-model="search" placeholder="search">
+
+<ul ng-if="toggle"> 
+<li ng-class="{'hidden': !toggle}" ng-repeat="item in list | filter:search"  ng-class="item.age>30?'over':'unders'"> 
+
+ <ng-include src="'photo.html'">  </ng-include>
+    
+     <!-- <img ng-src="{{item.img}}" /> {{item.name}} - {{item.age}}  -->
+  </li>
+</ul>
+ <button  ng-hide="toggle" ng-click="toggle = true">Show Name</button>  
+ <button ng-hide="!toggle" ng-click="toggle = false ">Hide Name</button>
+
+<form ng-submit="addPerson()">
+  
+  <input type="text"  ng-model="name" placeholder="enter name">
+  <input type="number"  ng-model="age">
+  <input type="submit" value="Submit">
+
+</form>
