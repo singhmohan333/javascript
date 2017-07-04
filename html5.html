@@ -6,7 +6,14 @@
     <script src="/js/html5shiv.js"></script>
   <![endif]-->
  
-  <script>document.createElement("myHero")</script>
+  <script>document.createElement("myHero")
+
+
+var d = new Date();
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+document.getElementById("demo").innerHTML = days[d.getDay()];
+
+  </script>
   <style>
   myHero {
       display: block;

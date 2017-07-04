@@ -10,8 +10,6 @@
 			 		 
 			 		 angular.copy($scope.emp) ) 
 
-
-
 					// {empname:$scope.empname,
 					//  empid:$scope.empid,
 					//   gender:$scope.gender,
@@ -27,8 +25,7 @@
 			 $scope.emp.contact = "";
 			 $scope.emp.address= "";
 			 $scope.emp.deptname = "";
-			 
-			 	
+			 		 	
 			 }
 			 $scope.deleterec = function(index){
 			 	$scope.employee.splice(index,1);
