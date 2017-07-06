@@ -18,7 +18,7 @@ angular.module('detailEmp', ['ngAnimate','ui.router'])
 		 $scope.toggle = true ;
 
 			$scope.list = [ {name:'mohan',  age:20 , img:'il.png'},
-			{name:'MONU',  age:24 , img:'il.png'},
+			{name:'Manoj',  age:24 , img:'il.png'},
 			{name:'raju',  age:30 , img:'ik.png'},
 			{name:'ROHAN',  age:35 , img:'il.png'},
 			{name:'alon',  age:26 , img:'ik.png'},
