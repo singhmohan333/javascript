@@ -6,12 +6,28 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+input.ng-invalid {
+    background-color:pink;
+}
+input.ng-valid {
+    background-color:lightgreen;
+}
+
+form.ng-pristine {
+    background-color: lightblue;
+}
+form.ng-dirty {
+    background-color: green;
+}
+</style>
 	</head>
-<body>
+<body ng-app="">
 
 
 <div class="container">
-<form >
+<form name="myForm" method="post">
 <div class="col-sm-10 text-center" style="background:silver">
 
 
@@ -26,7 +42,11 @@
             </div>
 
             <div class="col-sm-3">
-          <input type="text" class="form-control" ng-model="productname" placeholder="Enter name">
+          <input type="text" class="form-control" name="productName" ng-model="productName" placeholder="Entername" required> 
+        <!--  <span ng-show="myForm.productName.$touched && myForm.productName.$invalid">The name is required.</span> -->
+
+      
+    
           </div>
 
           <div class="col-sm-3 text-right">
@@ -34,7 +54,8 @@
             </div>
 
             <div class="col-sm-3">
-          <input type="text" class="form-control" ng-model="productprice" placeholder="Enter price">
+          <input type="text" class="form-control" name="productPrice" ng-model="productPrice" placeholder="Enter price" required>
+         
           </div>
     </div>
 
@@ -43,13 +64,13 @@
           <label>Code</label> 
             </div>
             <div class="col-sm-3">
-          <input type="text" class="form-control" ng-model="productcode" placeholder="Enter Code">
+          <input type="text" class="form-control" ng-model="productcode" placeholder="Enter Code" required>
           </div>
             <div class="col-sm-3 text-right">
           <label>Model</label> 
             </div>
             <div class="col-sm-3">
-          <input type="text" class="form-control" ng-model="productid" placeholder="Enter model">
+          <input type="text" class="form-control" ng-model="productid" placeholder="Enter model" required>
           </div>
 
     </div>
@@ -60,14 +81,18 @@
           <label>Make</label> 
             </div>
             <div class="col-sm-3">
-          <input type="text" class="form-control" ng-model="productcolour" placeholder="Enter company">
+          <input type="text" class="form-control" ng-model="productColour" placeholder="Enter company" required>
+             <span ng-show="myForm.product.$invalid">The Colour is required.</span>
+         
           </div>
 
           <div class="col-sm-3 text-right">
           <label>Quantity </label> 
             </div>
             <div class="col-sm-3">
-          <input type="text" class="form-control" ng-model="productqty" placeholder="Enter Quantity">
+          <input type="text" class="form-control" name="productQty" ng-model="productQty" placeholder="Enter Quantity" required>
+
+          
           </div>
     </div>
    
@@ -76,13 +101,14 @@
 
     <div class="row">
     <div class="col-sm-6 ">
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" ng-disabled="myForm.productName.$dirty && myForm.productName.$invalid" ng-model="" ng-click=" " class="btn btn-success">Submit</button>
   </div>
   <div class="col-sm-6">
       <button type="reset" class="btn btn-warning">Reset</button>
   </div>
 
 </form>
+
 
 </div>
 
