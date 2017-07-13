@@ -34,5 +34,26 @@ app.directive('myDirective', function() {
 
 <p>The input field must contain the character "e" to be consider valid.</p>
 
+</form>
+
+<form name="myForms">
+  <label>
+    Enter your name:
+    <input type="text"
+           name="myNames"
+           ng-model="name"
+           ng-minlength="5"
+           ng-maxlength="20"
+           required />
+  </label>
+  <pre>myForms.myNames.$error = {{ myForms.myNames.$error | json }}</pre>
+
+  <div ng-messages="myForms.myNames.$error" style="color:maroon" role="alert">
+    <div ng-message="required">You did not enter a field</div>
+    <div ng-message="minlength">Your field is too short</div>
+    <div ng-message="maxlength">Your field is too long</div>
+  </div>
+</form>
+
 </body>
 </html>
